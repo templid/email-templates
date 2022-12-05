@@ -1,4 +1,5 @@
 # HTML invoice template
+![HTML invoice template example](https://raw.githubusercontent.com/templid/email-templates/main/templid-dynamic-templates/invoice-01/invoice-01-template-example.png)
 
 This template was created to send dynamic data from Google Sheets using Templid.
 
