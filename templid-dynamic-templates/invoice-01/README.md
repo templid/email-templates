@@ -21,3 +21,5 @@ This Google sheets document is using custom script.
 In order to send emails you have allow script to run on your behalf.
 
 For the first time you'll click `Invoicing -> Send invoice` the new dialog window will appear. Click **Authorize**, then select your account and follow the steps shown in the image below:
+
+![Google permissions](https://raw.githubusercontent.com/templid/email-templates/main/resources/google-script-permissions.png)
