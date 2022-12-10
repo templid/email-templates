@@ -9,7 +9,7 @@ If you want to try our simple and free Google Sheets invoicing system follow ste
 
 1. Make a copy of Google sheets file: https://docs.google.com/spreadsheets/d/1pAyycrKj3GKHSvHo6lhp5BzUQ-rCB6qu1T96YFN1z50/edit?usp=sharing
 1. Fill the data with your company information in `Settings` tab
-1. Create free account on [templid.com](https://templid.com//)
+1. Create free account on [templid.com](https://templid.com/)
 1. Copy code from [invoice-01.html](https://github.com/templid/email-templates/blob/main/templid-dynamic-templates/invoice-01/invoice-01.html) and paste it to your template in templid.com. For the subject you can use same variables from HTML, eg. `Invoice {{ invoice.general.formatted_invoice_number }} for {{ customer[0] }}`
 1. After, copy template ID from your dashboard in templid.com and paste it to your Google sheets `Settings` tab next to `templid_template_id` row
 1. Generate token in the templid.com and paste it to your Google sheets `Settings` tab next to `templid_token` row
