@@ -194,3 +194,50 @@ function getCustomerData()
 
   return result
 }
+
+/**
+ * Get sheet by ID.
+ * 
+ * We use this to avoid tab/sheet renaming coupling
+ */
+function getSheetById(id) {
+  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet()
+  var name        = getSheetNameById(spreadsheet.getSheets(), id)
+
+  return spreadsheet.getSheetByName(name)
+}
+
+/**
+ * Get sheet name by ID
+ */
+function getSheetNameById(allSheets, id)
+{
+  for(var i = 0; i < allSheets.length; i += 1) {
+    if (id == allSheets[i].getSheetId()) {
+      return allSheets[i].getSheetName()
+    }
+  }
+
+  return null;
+}
+
+/**
+ * Parse data from sheet with two columns (A:B) and return key-value object.
+ * Where A column is `key` and B column is `value`.
+ */
+function sheetToKeyValueObject(sheetId) {
+  const sheet    = getSheetById(sheetId).getRange('A1:B').getDisplayValues()
+  const sheetLen = sheet.length;
+
+  const result = {}
+
+  for (let i = 0; i < sheetLen; ++i) {
+    if (sheet[i][0].length === 0) {
+      return result
+    }
+
+    result[sheet[i][0]] = sheet[i][1]
+  }
+
+  return result
+}
