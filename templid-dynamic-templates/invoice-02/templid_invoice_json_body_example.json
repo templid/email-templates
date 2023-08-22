@@ -1,7 +1,7 @@
 {
   "invoiceNumber": "INV-000256",
   "invoiceDate": "2023-08-01",
-  "currencySymbold": "$",
+  "currencySymbol": "$",
   "customer": {
     "company": "Client company",
     "number": "123456",

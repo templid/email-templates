@@ -9,7 +9,7 @@
       "type": "string",
       "description": "Invoice date"
     },
-    "currencySymbold": {
+    "currencySymbol": {
       "type": "string",
       "description": "Currency symbol, for example '$'"
     },
