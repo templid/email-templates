@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "properties": {
+    "invoiceNumber": {
+      "type": "string",
+      "description": "Invoice number"
+    },
+    "invoiceDate": {
+      "type": "string",
+      "description": "Invoice date"
+    },
+    "currencySymbol": {
+      "type": "string",
+      "description": "Currency symbol, for example '$'"
+    },
+    "customer": {
+      "type": "object",
+      "description": "Customer details",
+      "properties": {
+        "company": {
+          "type": "string",
+          "description": "Company name"
+        },
+        "number": {
+          "type": "string",
+          "description": "Company number"
+        },
+        "vat": {
+          "type": "string",
+          "description": "Company VAT number"
+        },
+        "country": {
+          "type": "string",
+          "description": "Company billing country"
+        },
+        "address1": {
+          "type": "string",
+          "description": "Company billing address 1"
+        },
+        "address2": {
+          "type": "string",
+          "description": "Company billing address 2"
+        },
+        "city": {
+          "type": "string",
+          "description": "Company billing city"
+        },
+        "postCode": {
+          "type": "string",
+          "description": "Company billing post code"
+        }
+      }
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Product name"
+          },
+          "price": {
+            "type": "number",
+            "description": "Product price"
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 1,
+            "description": "Product quantity"
+          },
+          "vat": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Vat rate, maximum value 100"
+          }
+        },
+        "required": [
+          "name",
+          "price",
+          "quantity",
+          "vat"
+        ]
+      }
+    }
+  },
+  "required": [
+    "invoiceNumber",
+    "invoiceDate",
+    "currencySymbol",
+    "customer",
+    "products"
+  ]
+}

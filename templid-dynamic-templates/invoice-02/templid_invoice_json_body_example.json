@@ -1,0 +1,23 @@
+{
+  "invoiceNumber": "INV-000256",
+  "invoiceDate": "2023-08-01",
+  "currencySymbol": "$",
+  "customer": {
+    "company": "Client company",
+    "number": "123456",
+    "vat": "987654",
+    "address1": "2252 Cost Avenue",
+    "address2": "Maryland",
+    "city": "Greenbelt",
+    "country": "United States",
+    "postCode": "20770"
+  },
+  "products": [
+    {
+      "name": "Monthly accounting services",
+      "price": 500,
+      "quantity": 1,
+      "vat": 20
+    }
+  ]
+}
