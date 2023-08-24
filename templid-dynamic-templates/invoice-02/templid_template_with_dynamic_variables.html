@@ -555,13 +555,13 @@
             <tr>
               <td class="border-b py-3 pl-3">{{ loop.index }}.</td>
               <td class="border-b py-3 pl-2">{{ product.name }}</td>
-              <td class="border-b py-3 pl-2 text-right">{{ currencySymbold }}{{ product.price|number_format(2, '.', ',')
+              <td class="border-b py-3 pl-2 text-right">{{ currencySymbol }}{{ product.price|number_format(2, '.', ',')
                 }}</td>
               <td class="border-b py-3 pl-2 text-center">{{ product.quantity }}</td>
               <td class="border-b py-3 pl-2 text-center">{{ product.vat }}%</td>
-              <td class="border-b py-3 pl-2 text-right">{{ currencySymbold }}{{ productSubtotal|number_format(2, '.',
+              <td class="border-b py-3 pl-2 text-right">{{ currencySymbol }}{{ productSubtotal|number_format(2, '.',
                 ',') }}</td>
-              <td class="border-b py-3 pl-2 pr-3 text-right">{{ currencySymbold }}{{ productTotal|number_format(2, '.',
+              <td class="border-b py-3 pl-2 pr-3 text-right">{{ currencySymbol }}{{ productTotal|number_format(2, '.',
                 ',') }}</td>
             </tr>
             {% endfor %}
@@ -579,7 +579,7 @@
                                 <div class="whitespace-nowrap text-slate-400">Net total:</div>
                               </td>
                               <td class="border-b p-3 text-right">
-                                <div class="whitespace-nowrap font-bold text-main">{{ currencySymbold }}{{
+                                <div class="whitespace-nowrap font-bold text-main">{{ currencySymbol }}{{
                                   totalNetAmount|number_format(2, '.', ',') }}</div>
                               </td>
                             </tr>
@@ -588,7 +588,7 @@
                                 <div class="whitespace-nowrap text-slate-400">VAT total:</div>
                               </td>
                               <td class="p-3 text-right">
-                                <div class="whitespace-nowrap font-bold text-main">{{ currencySymbold }}{{
+                                <div class="whitespace-nowrap font-bold text-main">{{ currencySymbol }}{{
                                   totalVatAmount|number_format(2, '.', ',') }}</div>
                               </td>
                             </tr>
@@ -597,7 +597,7 @@
                                 <div class="whitespace-nowrap font-bold text-white">Total:</div>
                               </td>
                               <td class="bg-main p-3 text-right">
-                                <div class="whitespace-nowrap font-bold text-white">{{ currencySymbold }}{{
+                                <div class="whitespace-nowrap font-bold text-white">{{ currencySymbol }}{{
                                   totalAmount|number_format(2, '.', ',') }}</div>
                               </td>
                             </tr>
